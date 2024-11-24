@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Coffee Date</string>
+    <string name="coffee_planner_screen_background_title_first">Clever-Tech</string>
+    <string name="coffee_planner_screen_background_title_second">Coffee date</string>
+    <string name="coffee_planner_screen_background_image">Zwei Personen beim Mittagessen</string>
+    <string name="search_bar_placeholder_text">Filtere nach Mitarbeitern</string>
+</resources>
