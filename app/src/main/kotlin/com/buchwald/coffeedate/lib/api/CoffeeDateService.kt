@@ -46,7 +46,7 @@ internal class DefaultCoffeeDateService(
 
 }
 
-internal inline fun <B, reified T : Any> mapSuccess(successfulResponse: Response<B>): Result.Success<T> {
+internal inline fun <R, reified T : Any> mapSuccess(successfulResponse: Response<R>): Result.Success<T> {
     val body = successfulResponse.body()
     val meta = (body as? ApiBody<*>)?.meta
     val data = when (body) {
