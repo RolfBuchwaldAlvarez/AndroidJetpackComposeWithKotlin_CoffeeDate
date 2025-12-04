@@ -12,11 +12,12 @@ import java.net.SocketException
 import java.net.SocketTimeoutException
 import java.net.UnknownHostException
 import java.nio.channels.ClosedChannelException
+import javax.inject.Inject
 import kotlin.coroutines.cancellation.CancellationException
 
-interface CoffeeDateService : CoffeePlannerService
+internal interface CoffeeDateService : CoffeePlannerService
 
-internal class DefaultCoffeeDateService(
+internal class DefaultCoffeeDateService @Inject constructor(
     private val coffeeDateApi: CoffeeDateApi,
     private val apiErrorsParser: ApiErrorsParser,
 ) : CoffeeDateService {
