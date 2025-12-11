@@ -15,7 +15,7 @@ import java.nio.channels.ClosedChannelException
 import javax.inject.Inject
 import kotlin.coroutines.cancellation.CancellationException
 
-internal interface CoffeeDateService : CoffeePlannerService
+interface CoffeeDateService : CoffeePlannerService
 
 internal class DefaultCoffeeDateService @Inject constructor(
     private val coffeeDateApi: CoffeeDateApi,
