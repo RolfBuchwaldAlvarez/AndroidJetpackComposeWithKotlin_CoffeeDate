@@ -28,6 +28,7 @@ internal interface CoffeePlannerViewModelModule {
     fun bind(impl: DefaultCoffeePlannerViewModel): CoffeePlannerViewModel
 }
 
+@CoffeePlannerViewModelScope
 internal class DefaultCoffeePlannerViewModel @Inject constructor(
     private val getCoffeePairListUseCase: GetCoffeePairListUseCase,
 ) : CoffeePlannerViewModel() {

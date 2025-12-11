@@ -7,6 +7,7 @@ import com.buchwald.coffeedate.feature.coffeeplanner.domain.usecase.GetCoffeePai
 import com.buchwald.coffeedate.feature.coffeeplanner.domain.usecase.SaveCoffeePairListUseCaseModule
 import com.buchwald.coffeedate.lib.api.dagger.CoffeeDateServiceComponent
 import dagger.Component
+import javax.inject.Scope
 
 object CoffeePlannerViewModelFactory : ViewModelProvider.Factory {
 
@@ -19,6 +20,7 @@ object CoffeePlannerViewModelFactory : ViewModelProvider.Factory {
     }
 }
 
+@CoffeePlannerViewModelScope
 @Component(
     modules = [
         CoffeePlannerViewModelModule::class,
@@ -33,3 +35,7 @@ object CoffeePlannerViewModelFactory : ViewModelProvider.Factory {
 internal interface CoffeePlannerViewModelComponent {
     fun viewModel(): CoffeePlannerViewModel
 }
+
+@Scope
+@Retention(AnnotationRetention.RUNTIME)
+annotation class CoffeePlannerViewModelScope
