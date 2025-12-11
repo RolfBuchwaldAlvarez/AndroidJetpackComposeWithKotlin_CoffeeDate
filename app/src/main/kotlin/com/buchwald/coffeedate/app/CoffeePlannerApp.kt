@@ -15,7 +15,7 @@ class CoffeePlannerApp : Application() {
     private fun createAppComponent(application: Application) {
         val appComponent = DaggerAppComponent.factory()
             .create(AppModule(application))
-        CoffeeDateServiceComponent.instance = appComponent
 
+        CoffeeDateServiceComponent.instance = appComponent
     }
 }
